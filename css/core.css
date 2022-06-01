@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* 공통핵심 CSS - core.css */
+/* 웹폰트, 공용클래스 */
+
+/* 공통클래스 */
+.ibx{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
+/* IR(Image Replacement) 배경이미지 설명 숨기기 클래스 */
+/* IR 기법 사용시 주의사항 : 
+display:none사용금지! 왜? 스크린 리더기가 못읽음!*/
+
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.clb::after{
+    content: '';
+    display: block;
+    clear: both;
+}

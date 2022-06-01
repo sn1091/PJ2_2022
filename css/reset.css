@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* 요소의 기본셋팅 초기화 CSS */
+
+html{
+    font-size: 10px;
+}
+
+/* 기본태그 초기화 - 마진, 패딩 없애기 */
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+
+/* 가로스크롤 생김 방지!(특히 모바일) */
+html,body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 헤딩태그 글자크기 초기화 */
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    /* 글자크기 100%는 기본글자크기와 같아지는 셋팅
+    기본글자크기는 16px */
+    
+}
+
+/* ul,ol 초기화 */
+ul,ol{
+    list-style: none; /* lin */
+    /* 블릿,숫자 표시 없앰 */
+}
+
+/* a요소 리셋 */
+a {
+    color: #000;
+    text-decoration: none;
+    /* 밑줄없앰 */
+}
+
+/* 이미지 공통셋팅 */
+img {
+    /* 블록박스 이미지 하단공백 제거 */
+    vertical-align: middle;
+    /* 링크시 테두리 제거(파란색 기본 보더) */
+    border: none;
+}
+
+

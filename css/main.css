@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* 2. 메인영역 CSS */
+
+@import url(core.css);
+@import url(common.css);
+@import url(reset.css);
+
+body *{
+    outline: 1px dashed limegreen;
+}
+
+

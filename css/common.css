@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/* 공통영역 CSS -header, footer */
+
+
+.top{
+    padding-top: 21px;
+    /* 색이반고윙/크 */
+    background: url(../images/bg_header.gif) repeat-x;
+    border-top: 3px solid #ff7c98;
+    border-bottom: 1px solid #3f291a;
+}
+.top_area{
+    position: relative;
+    width: 1200px;
+    height: 114px;
+    margin: 0 auto;
+
+}
+/*********** 1-1. 로고이미지 ********************/
+.top #logo{
+    text-align: center;
+}
+
+/******************* 1-2. sns 영역 *******************/
+#sns{
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.sns li{
+    width: 30px;
+    height: 30px;
+    background: url(../images/sns_icon_all.png) no-repeat;
+    float: left;
+    border: 2px solid #f6cad4;
+    border-radius: 50%;
+    margin-right: 2px;
+    transform: scale(.8);
+}
+
+/* float:left 해제 -> core.css로 이동*/
+/* .sns::after{
+    content: '';
+    display: block;
+    clear: both;
+} */
+
+.sns li:nth-child(1){
+    background-position: -16px -124px;
+}
+
+.sns li:nth-child(2){
+    background-position: -76px -124px;
+}
+
+.sns li:nth-child(3){
+    background-position: -186px -123px;
+}
+
+.sns li:nth-child(4){
+    background-position: -246px -124px;
+}
+
+.sns li:nth-child(5){
+    background-position: -130px -124px;
+}
+
+/* block 속성으로 바꾸어서 li안에 꽉차게 만듦 */
+.sns a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* sns 아이콘 마우스 오버시 회색변경 - filter: grayscale 적용 */
+.sns li:hover {
+    filter: grayscale(100%);
+}
+
+/******** 1-4, 1-5. 고객센터메뉴, 검색창 버튼 **************/
+.tmenu{
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.tmenu ul{
+    display: flex;
+    align-items: center;
+}
+
+.tmenu li{
+    padding-left: 20px;
+
+}
+
+/******* GNB영역박스 ******/
+#gnb{
+    /* position: fixed; */
+    border-top: 1px solid #e2d9d6;
+}
+
+.menu_area{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/****** 1-3. 로그인메뉴 : 로그인, 회원메뉴 **********/
+.member{
+    display: flex;
+}
+
+.member li{
+    width: 41px;
+    height: 30px;
+    background: url(../images/gnb_menu.png) no-repeat;
+    margin-right:30px;
+}
+
+.member li:first-child{
+    background-position: 3px -9px;
+}
+.member li:last-child{
+    background-position: -92px -9px;
+}
+.member a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/**************** 1-6. GNB메뉴 ********************/
+
+.menu{
+    display: flex;
+    width: 980px;
+    justify-content: space-between;
+}
+
+.menu li{
+    height: 43px;
+    background: url(../images/gnb_menu.png) no-repeat;
+    /* background-position: 0 0; */
+    /* margin-left: 100px; */
+}
+.menu li:nth-child(1){
+    width: 164px;
+    background-position: -133px -3px;;
+}
+.menu li:nth-child(2){
+    width: 42px;
+    background-position: -415px -3px;
+}
+.menu li:nth-child(3){
+    width: 105px;
+    background-position: -545px -3px;
+}
+.menu li:nth-child(4){
+    width: 42px;
+    background-position: -737px -3px;
+}
+.menu li:nth-child(5){
+    width: 49px;
+    background-position: -897px -3px;
+}
+.menu li:nth-child(6){
+    width: 49px;
+    background-position: -1057px -3px;
+}
+
+.menu a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* GNB 메뉴 마우시 오버 동작 */
+.menu:hover .smenu{
+    display: block;
+}
