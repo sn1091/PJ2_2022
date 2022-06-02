@@ -143,44 +143,91 @@
     justify-content: space-between;
 }
 
-.menu li{
+.menu>li{
+    position: relative;
     height: 43px;
     background: url(../images/gnb_menu.png) no-repeat;
     /* background-position: 0 0; */
     /* margin-left: 100px; */
 }
-.menu li:nth-child(1){
+.menu>li:nth-child(1){
     width: 164px;
     background-position: -133px -3px;;
 }
-.menu li:nth-child(2){
+.menu>li:nth-child(2){
     width: 42px;
     background-position: -415px -3px;
 }
-.menu li:nth-child(3){
+.menu>li:nth-child(3){
     width: 105px;
     background-position: -545px -3px;
 }
-.menu li:nth-child(4){
+.menu>li:nth-child(4){
     width: 42px;
     background-position: -737px -3px;
 }
-.menu li:nth-child(5){
+.menu>li:nth-child(5){
     width: 49px;
     background-position: -897px -3px;
 }
-.menu li:nth-child(6){
+.menu>li:nth-child(6){
     width: 49px;
     background-position: -1057px -3px;
 }
 
-.menu a{
+.menu>li>a{
     display: block;
     width: 100%;
     height: 100%;
 }
 
+/* GNB 하단 레이어 */
+.gnb_layer{
+    /* position: absolute; */
+
+    height: 275px;
+}
+
+.gnb_bg{
+    /* position: relative; */
+    width: 1200px;
+    height: 204px;
+    margin: 0 auto;
+    background: url(../images/img_happypoint_app.jpg) no-repeat;
+    background-position: 0 60px;
+}
+
+/* 서브메뉴 */
+.smenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    /* transform: translateX(-50%); */
+    
+}
+.smenu ol{
+    margin-top: 40px;
+}
+.smenu li{
+    text-align: center;
+    height: 40px;
+}
+.smenu a{
+    font-size: 1.4rem;
+    color: #948780;
+    padding:5px;
+    line-height: 40px;
+    
+
+}
+
 /* GNB 메뉴 마우시 오버 동작 */
 .menu:hover .smenu{
     display: block;
+}
+
+/* 서브메뉴 마우스 오버시 글자색상 변경 */
+.smenu a:hover{
+    color: #ff75ac;
 }
