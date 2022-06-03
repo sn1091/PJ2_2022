@@ -10,4 +10,28 @@ body *{
     outline: 1px dashed limegreen;
 }
 
+.cont{
+     /* 화면채움! */
+     width: 100%;
 
+     /* 높이값 변경 - 상단영역 겹치므로 뺄필요없음 */
+     height: 100vh;
+     box-sizing: border-box;
+}
+
+/* 2-1. 상단 띠배너 : #main_banner */
+#main_banner {
+    width: 100%;
+    margin-bottom: 3px;
+}
+#main_banner a{
+    display: block;
+    /* 색이반고윙/크  */
+    background: lemonchiffon url(../images/main_banner_june.jpg) no-repeat 50% 0;
+    height: 150px;
+}
+
+/* 2-2. 슬라이드 배너 : #slide_banner */
+#slide_banner{
+
+}

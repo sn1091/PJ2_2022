@@ -139,54 +139,76 @@
 
 .menu{
     display: flex;
-    width: 980px;
+    /* width: 980px; */
     justify-content: space-between;
 }
 
-.menu>li{
+.menu> li{
     position: relative;
-    height: 43px;
-    background: url(../images/gnb_menu.png) no-repeat;
+    /* overflow: hidden; */
+    /* width: 130px; */
+    /* height: 43px; */
+    /* background: url(../images/gnb_menu.png) no-repeat; */
     /* background-position: 0 0; */
     /* margin-left: 100px; */
 }
-.menu>li:nth-child(1){
-    width: 164px;
-    background-position: -133px -3px;;
+.menu>li .gibx{
+    /* width: 0; */
+    height: 43px;
+    margin: 0 59px;
+    background: url(../images/gnb_menu.png) no-repeat;
+    
+    
 }
-.menu>li:nth-child(2){
+.menu>li:nth-child(1)> .gibx{
+    width: 164px;
+    background-position: -133px -3px;
+    margin-left: 0;
+}
+.menu>li:nth-child(2)> .gibx{
     width: 42px;
     background-position: -415px -3px;
 }
-.menu>li:nth-child(3){
+.menu>li:nth-child(3) .gibx{
     width: 105px;
     background-position: -545px -3px;
+    margin: 0 30px;
 }
-.menu>li:nth-child(4){
+.menu>li:nth-child(4) .gibx{
     width: 42px;
     background-position: -737px -3px;
 }
-.menu>li:nth-child(5){
+.menu>li:nth-child(5) .gibx{
     width: 49px;
     background-position: -897px -3px;
 }
-.menu>li:nth-child(6){
+.menu>li:nth-child(6) .gibx{
     width: 49px;
     background-position: -1057px -3px;
+    margin-right: 0;
 }
-
-.menu>li>a{
+/* a요소 div 꽉차게 설정 */
+.menu .gibx a{
     display: block;
     width: 100%;
     height: 100%;
 }
 
-/**** GNB 하단 레이어 ****/
+/********** GNB 하단 레이어 **********/
 .gnb_layer{
-    /* position: absolute; */
-    top: 204px;
+    position: absolute;
+    top: 182px;
+    left: 0;
     width: 100%;
-    height: 275px;
+    height: 0;
+    /* height: 275px; */
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    /* 트랜지션 : 속시이지 */
+    transition: height .5s ease-in-out;
 }
 
 .gnb_bg{
@@ -196,36 +218,66 @@
     margin: 0 auto;
     background: url(../images/img_happypoint_app.jpg) no-repeat;
     background-position: 0 60px;
+    /* display: none; */
 }
 
-/* 서브메뉴 */
+/*********** GNB 서브메뉴 **********/
 .smenu{
     position: absolute;
-    top: 100%;
-    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0px;
     white-space: nowrap;
+    overflow: hidden;
+    /* 트랜지션 : 속시이지 */
+    transition: 
+    height .5s ease-in-out;
     /* transform: translateX(-50%); */
+    /* display: none; */
     
+}
+/* GNB 이달의 맛 이미지 투명하게 설정 */
+.smenu img{
+    opacity: 0;
+    transition: opacity .2s ease-in .4s;
 }
 .smenu ol{
     margin-top: 40px;
 }
 .smenu li{
     text-align: center;
-    height: 40px;
 }
-.smenu a{
-    font-size: 1.4rem;
+.smenu ol li a{
+    font-size: 1.3rem;
     color: #948780;
-    padding:5px;
-    line-height: 40px;
-    
-
+    padding: 5px;
+    line-height: 4rem;
+    opacity: 0;
+    transition: opacity .4s linear .3s;
 }
 
-/* GNB 메뉴 마우시 오버 동작 */
+.smenu.last{
+    margin-left: 20px;
+}
+
+/********** GNB 메뉴 마우시 오버 동작 **********/
+
+/* 레이어 나타남 */
+.menu:hover .gnb_layer{
+    height: 275px;
+}
+
+/* 서브메뉴목록 나타남 */
 .menu:hover .smenu{
-    display: block;
+    height: 275px;
+}
+/* 첫번째서브메뉴(이달의맛 이미지) 나타남 */
+.menu:hover .smenu img{
+    opacity: 1;
+}
+/* 서브메뉴 글자 나타남 */
+.menu:hover .smenu a{
+    opacity: 1;
 }
 
 /* 서브메뉴 마우스 오버시 글자색상 변경 */
