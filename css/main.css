@@ -12,13 +12,14 @@ body *{
 
 .cont{
      /* 화면채움! */
-     width: 100%;
+     width: auto;
 
      /* 높이값 변경 - 상단영역 겹치므로 뺄필요없음 */
      height: 100vh;
      box-sizing: border-box;
 }
 
+/************* 상단 배너 영역 시작 **************************/
 /* 2-1. 상단 띠배너 : #main_banner */
 #main_banner {
     width: 100%;
@@ -33,5 +34,119 @@ body *{
 
 /* 2-2. 슬라이드 배너 : #slide_banner */
 #slide_banner{
+    position: relative;
+    /* 자식 : .slide_banner li(배너이미지), .btns(좌/우버튼) */
+    width: 100%;
+    height: 697px;
+    overflow: hidden;
+    
+}
+.slide_banner li{
+    position: absolute;
+    /* 부모 : #slide_banner */
+    top: 0;
+    left:100%;
+    width: 100%;
+    height: 697px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    
 
 }
+/* 1번째 배너 */
+.slide_banner li:nth-child(1){
+    background-image: url(../images/slide_banner1.jpg);
+    background-color: #00A2EA;
+    left: 0;
+}
+/* 2번째 배너 */
+.slide_banner li:nth-child(2){
+    background-image: url(../images/slide_banner2.png);
+    background-color: #1AA1D5;
+}
+/* 3번째 배너 */
+.slide_banner li:nth-child(3){
+    background-image: url(../images/slide_banner3.png);
+    background-color: #FED5BB;
+    
+}
+/* 4번째 배너 */
+.slide_banner li:nth-child(4){
+    background-image: url(../images/slide_banner4.png);
+    background-color: #F6F8F8;
+}
+/* 5번째 배너 */
+.slide_banner li:nth-child(5){
+    background-image: url(../images/slide_banner5.png);
+    background-color: #ffe103;
+}
+/* 6번째 배너 */
+.slide_banner li:nth-child(6){
+    background-image: url(../images/slide_banner6.png);
+    background-color: #fb637e;
+}
+/* 7번째 배너 */
+.slide_banner li:nth-child(7){
+    background-image: url(../images/slide_banner7.png);
+    background-color: #dbeffb;
+    
+}
+/* 8번째 배너 */
+.slide_banner li:nth-child(8){
+    background-image: url(../images/slide_banner8.png);
+    background-color: #5eb640;
+
+}
+
+@keyframes slideAni {
+
+    
+}
+
+
+/* 부모 li 만큼 꽉차게 만듦 */
+.slide_banner a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/******* 2-3. 좌/우버튼 ********/
+.btns a{
+    position: absolute;
+    /* 부모 : #slide_banner */
+    top: 50%;
+}
+.btns a:first-child{
+    left: 50px;
+}
+.btns a:last-child{
+    right: 50px;
+}
+
+/******** 2-4. 하단 인디케이터 ********/
+.indi{
+    position: absolute;
+    /* 부모 : #slide_banner */
+    bottom: 20px;
+    left: 50%;
+    /* width: 300px; */
+    /* height: 35px; */
+    transform: translateX(-50%);
+}
+.indi a{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin: 10px;
+    transition: background-color .2s, scale .2s;
+}
+
+.indi a:hover{
+    transform: scale(1.1);
+    background-color: black;
+}
+
+/********************** 상단 배너 영역 끝 **********************/

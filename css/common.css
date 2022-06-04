@@ -98,7 +98,7 @@
 
 /******* GNB영역박스 ******/
 #gnb{
-    /* position: fixed; */
+    position: relative;
     border-top: 1px solid #e2d9d6;
 }
 
@@ -197,7 +197,7 @@
 /********** GNB 하단 레이어 **********/
 .gnb_layer{
     position: absolute;
-    top: 182px;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 0;
@@ -206,6 +206,7 @@
     border-bottom: 1px solid #000;
     box-sizing: border-box;
     overflow: hidden;
+    z-index: 1;
 
     /* 트랜지션 : 속시이지 */
     transition: height .5s ease-in-out;
@@ -224,7 +225,7 @@
 /*********** GNB 서브메뉴 **********/
 .smenu{
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: 0px;
     white-space: nowrap;
@@ -256,8 +257,9 @@
     transition: opacity .4s linear .3s;
 }
 
+/* GNB ABOUT메뉴 하위 메뉴 우측으로 이동 */
 .smenu.last{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 /********** GNB 메뉴 마우시 오버 동작 **********/
