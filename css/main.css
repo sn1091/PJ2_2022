@@ -174,8 +174,16 @@ article h2{
 }
 .event_list ul{
     position: relative;
-     width: 1200px;
-     margin: 0 auto;
+    width: 1200px;
+    height: 465px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.event_list .list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
 }
 .event_list li{
     float:left;
@@ -183,6 +191,7 @@ article h2{
     height: 465px;
     box-sizing: border-box;
 }
+
 
 /* 3-3. 이벤트 내용 */
 .event_list span{
@@ -213,7 +222,7 @@ article h2{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cdccd5;;
+    background-color: #cdccd5;
     margin: 10px;
     transition: background-color .2s, scale .2s;
 }
@@ -221,6 +230,26 @@ article h2{
 .e_indi a:hover{
     transform: scale(1.2);
     background-color: black;
+}
+
+.event_list a>img{
+    /* 속시이지 */
+    transition: transform .2s ease-out ;
+}
+
+/* 이벤트 이미지 마우스 오버 */
+.event_list a>img:hover{
+    transform: rotate(5deg);
+    animation: eventAni .4s ease-in-out .2s infinite alternate;
+}
+
+@keyframes eventAni {
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
 }
 
 /****** 3-4. 메뉴 컨텐츠 : .menu_ct ********/
@@ -291,6 +320,9 @@ article h2{
     left: 284px;
     width: 322px;
     height: 158px;
+}
+.m_img a:hover{
+   
 }
 
 /****** 매장 & 배달 컨텐츠 영역 *******/
