@@ -203,7 +203,7 @@
     height: 0;
     /* height: 275px; */
     background-color: #fff;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
     box-sizing: border-box;
     overflow: hidden;
     z-index: 1;
@@ -267,6 +267,7 @@
 /* 레이어 나타남 */
 .menu:hover .gnb_layer{
     height: 275px;
+    border-bottom: 1px solid #000;
 }
 
 /* 서브메뉴목록 나타남 */

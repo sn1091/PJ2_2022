@@ -150,6 +150,11 @@ body *{
 }
 
 /********************** 상단 배너 영역 끝 **********************/
+/* 이벤트,메뉴,스토어딜리버리 타이틀 공통 */
+article h2{
+    text-align: center;
+    margin: 50px 0;
+}
 
 /******** 이벤트 컨텐츠 ********/
 .event{
@@ -158,10 +163,10 @@ body *{
     padding: 50px 0;
 }
 /* 3-1. 이벤트 타이틀 */
-.etit{
+/* .event h2{
     text-align: center;
     margin: 50px 0;
-}
+} */
 
 /* 3-2,3-3. 이벤트 이미지, 내용 영역 */
 .event_list{
@@ -221,17 +226,91 @@ body *{
 /****** 3-4. 메뉴 컨텐츠 : .menu_ct ********/
 
 .menu_ct{
-    height: 1157px;
+    height: 1070px;
     background: url(../images/bg_menu.jpg) no-repeat 50% 0;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 /* 메뉴 컨텐츠 타이틀  */
-.menu_ct .mtitle{
+/* .menu_ct h2{
     text-align: center;
-    margin: 30px 0;
-}
+    margin-bottom: 70px;
+} */
 
 /* 메뉴 컨텐츠 이미지 */
-.menu_ct .m_img{
+.m_img{
+    padding-top: 20px;
+}
+.m_img .mbx{
+    position: relative;
+    /* 자식 : a태그들 */
+    width: 981px;
+    height: 911px;
+    margin: 0 auto;
+}
+
+
+/* 메뉴 컨텐츠 클릭 영역 */
+.menu_ct .m_img a{
+    position: absolute;
+    /* 부모 : .mbx */
+}
+
+.m_img .icecream{
+    top: 28px;
+    left: 218px;
+    width: 390px;
+    height: 294px;
+}
+
+.m_img .cake{
+    top: 28px;
+    right: 60px;
+    width: 250px;
+    height: 460px;
+}
+.m_img .beverage{
+    top: 375px;
+    left: 22px;
+    width: 210px;
+    height: 345px;
+}
+.m_img .coffee{
+    top: 373px;
+    left: 286px;
+    width: 315px;
+    height: 274px;
+}
+.m_img .gift{
+    bottom: 211px;
+    right: 65px;
+    width: 260px;
+    height: 157px;
+}
+.m_img .dessert{
+    bottom: 50px;
+    left: 284px;
+    width: 322px;
+    height: 158px;
+}
+
+/****** 매장 & 배달 컨텐츠 영역 *******/
+#str_dv{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.str_dv{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3-6. 타이틀 영역 */
+/* .str_dv h2{
     text-align: center;
+    margin: 50px 0;
+} */
+
+/*3-7. 스토어 배달 영역 */
+.str_dv section{
+    width: 50%;
+    float: left;
 }
