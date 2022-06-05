@@ -15,7 +15,7 @@ body *{
      width: auto;
 
      /* 높이값 변경 - 상단영역 겹치므로 뺄필요없음 */
-     height: 100vh;
+     /* height: 100vh; */
      box-sizing: border-box;
 }
 
@@ -128,7 +128,7 @@ body *{
 .indi{
     position: absolute;
     /* 부모 : #slide_banner */
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     /* width: 300px; */
     /* height: 35px; */
@@ -150,3 +150,88 @@ body *{
 }
 
 /********************** 상단 배너 영역 끝 **********************/
+
+/******** 이벤트 컨텐츠 ********/
+.event{
+    /* height: 800px; */
+    /* -> 이벤트 이미지 조절 후 설정 */
+    padding: 50px 0;
+}
+/* 3-1. 이벤트 타이틀 */
+.etit{
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* 3-2,3-3. 이벤트 이미지, 내용 영역 */
+.event_list{
+   
+}
+.event_list ul{
+    position: relative;
+     width: 1200px;
+     margin: 0 auto;
+}
+.event_list li{
+    float:left;
+    width: 300px;
+    height: 465px;
+    box-sizing: border-box;
+}
+
+/* 3-3. 이벤트 내용 */
+.event_list span{
+    display: block;
+}
+.event_list .type{
+    margin: 22px 0 8px 0;
+}
+.event_list .title{
+    color: #2f231c;
+    font-size: 17px;
+    line-height: 23px;
+}
+.event_list .period{
+    margin: 11px 0;
+    font-weight: 300;
+    color: #948780;
+}
+
+/* 3-4. 이벤트 인디케이터 */
+.e_indi{
+    width: 131px;
+    /* height: 35px; */
+    margin: 0 auto;
+}
+.e_indi a{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cdccd5;;
+    margin: 10px;
+    transition: background-color .2s, scale .2s;
+}
+
+.e_indi a:hover{
+    transform: scale(1.2);
+    background-color: black;
+}
+
+/****** 3-4. 메뉴 컨텐츠 : .menu_ct ********/
+
+.menu_ct{
+    height: 1157px;
+    background: url(../images/bg_menu.jpg) no-repeat 50% 0;
+    padding: 50px 0;
+}
+/* 메뉴 컨텐츠 타이틀  */
+.menu_ct .mtitle{
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* 메뉴 컨텐츠 이미지 */
+.menu_ct .m_img{
+    text-align: center;
+}
