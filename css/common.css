@@ -287,3 +287,39 @@
 .smenu a:hover{
     color: #ff75ac;
 }
+
+
+/**************** 4. 하단영역 : .info  *************************/
+.info{
+    border-top: 1px solid #feaf2b;
+    padding-bottom: 60px;
+}
+
+/* 4-1. 하단메뉴 */
+.fmenu{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fmenu ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 77px;
+}
+
+.fmenu a{
+    font-size: 1.4rem;
+    color: #726454;
+}
+
+.fmenu li:nth-child(5) a{
+    color: #ff7c98;
+    font-weight: bold;
+}
+
+/* 4-2. 브랜드아이콘 */
+.bicon{
+    height: 75px;
+    background-color: #f9f8f7;;
+}

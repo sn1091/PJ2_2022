@@ -346,3 +346,28 @@ article h2{
     width: 50%;
     float: left;
 }
+
+/********** 인스타그램 영역 ***************/
+/* 3-8. 타이틀 영역 */
+
+.insta .itit{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.insta h2::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #dcd7d1;
+    z-index: -1;
+}
+
+.insta .ict{
+    height: 800px;
+}
