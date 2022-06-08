@@ -82,6 +82,7 @@
                     </ul>
                 </aside>
             </div>
+
             <!---------  GNB 영역 ----------->
             <div id="gnb">
                 <div class="menu_area">
@@ -276,6 +277,15 @@
             </div>
         </header>
     </div>
+    <!---------- 검색창 ---------------------------->
+    <div id="search">
+        <div class="search">
+            <div class="search_bx">
+
+                
+            </div>
+        </div>
+    </div>
 
     <!--  메인영역 : main -->
     <div id="cont">
@@ -381,9 +391,9 @@
             <!-- 3. 이벤트 컨텐츠 -->
             <article class="event">
                 <!-- 3-1. 이벤트 타이틀 -->
-                    <h2>
-                        <img src="./images/h_event.png" alt="이벤트">
-                    </h2>
+                <h2>
+                    <img src="./images/h_event.png" alt="이벤트">
+                </h2>
 
                 <!-- 3-2,3-3. 이벤트 이미지,내용 -->
                 <div class="event_list">
@@ -430,8 +440,8 @@
                                     <span class="period">상시진행</span>
                                 </a>
                             </li>
-                        
-                        <!-- 2번째 버튼 -->
+
+                            <!-- 2번째 버튼 -->
                             <li>
                                 <a href="#">
                                     <img src="images/banner2_1.png" alt="제주빙수3종">
@@ -514,7 +524,7 @@
                                     <span class="period">상시진행</span>
                                 </a>
                             </li>
-                            
+
 
                             <!-- 4번째 버튼 -->
                             <li>
@@ -552,21 +562,21 @@
             <!-- 3-5. 메뉴컨텐츠 : 메뉴이동 영역 -->
             <article class="menu_ct">
                 <!-- 타이틀 -->
-                
-                    <h2>
-                        <img src="./images/h_menu.png" alt="메뉴타이틀">
-                    </h2>
-               
+
+                <h2>
+                    <img src="./images/h_menu.png" alt="메뉴타이틀">
+                </h2>
+
                 <!-- 이미지 영역 -->
                 <div class="m_img">
                     <div class="mbx">
                         <img src="./images/img_menu_list_220429.png" alt="메뉴리스트 이미지">
-                            <a href="#" class="icecream"></a>
-                            <a href="#" class="cake"></a>
-                            <a href="#" class="beverage"></a>
-                            <a href="#" class="coffee"></a>
-                            <a href="#" class="gift"></a>
-                            <a href="#" class="dessert"></a>
+                        <a href="#" class="icecream"></a>
+                        <a href="#" class="cake"></a>
+                        <a href="#" class="beverage"></a>
+                        <a href="#" class="coffee"></a>
+                        <a href="#" class="gift"></a>
+                        <a href="#" class="dessert"></a>
                     </div>
                 </div>
 
@@ -617,7 +627,7 @@
     <!-- 4. 하단영역 : footer -->
     <div id="info">
         <footer class="ibx info">
-            
+
             <!-- 4-1. 하단메뉴 -->
             <div class="fmenu">
                 <ul>
@@ -642,12 +652,70 @@
                     <li>
                         <a href="#">거래희망회사 사전등록</a>
                     </li>
-                   
+
                 </ul>
             </div>
 
             <!-- 4-2. 브랜드 아이콘 -->
             <div class="bicon">
+                <div class="bicon_bx">
+                    <a
+                        href="https://www.happypointcard.com/page/main/index.spc;jsessionid=FCBB1181C146A71AD1192E5239694E1F">
+                        <img src="./images/btn_happypoint.png" alt="해피포인트">
+                    </a>
+                    <a href="http://m.celectory.com/mobile/gift/recommend?">
+                        <img src="./images/btn_happymarket.png" alt="해피마켓">
+                    </a>
+                    <a href="http://www.spc.co.kr/contributionAll">
+                        <img src="./images/btn_spc_story.png" alt="SPC이야기">
+                    </a>
+                    <div class="micon">
+                        <a href="#">
+                            <img src="./images/btn_norton.gif" alt="노튼">
+                        </a>
+                        <a href="https://www.kca.go.kr/ccm/">
+                            <img src="./images/btn_ccm_2.png" alt="한국소비자원" id="ccm">
+                        </a>
+                        <a href="https://knqa.ksa.or.kr/knqa/2276/subview.do">
+                            <img src="./images/btn_ksa.png" alt="국가품질">
+                        </a>
+                    </div>
+                    <!-- 4-5. 패밀리사이트 바로가기 -->
+                    <div class="sel">
+                        <select name="Family Site" id="fs" onchange="window.open(value,'_blank');">
+                            <option selected="" disabled="">FAMILY SITE</option>
+
+                            <option value="http://www.dunkindonuts.co.kr/">던킨도너츠</option>
+
+                            <option value="https://www.paris.co.kr/">파리바게트</option>
+
+                            <option value="https://spcsamlip.co.kr/">삼립</option>
+
+                            <option value="https://www.caffe-pascucci.co.kr/index.asp">파스쿠찌</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4-3. 하단 로고 -->
+            <div class="f_logo">
+                <img src="./images/footer_logo.png" alt="로고">
+            </div>
+
+            <!-- 4-4. 하단 주소정보 -->
+            <div class="addr">
+                    <div>
+                        <p>사업자 등록번호 : 303-81-09535</p>
+                        <p>비알코리아(주) 대표이사 도세호</p>
+                          <address>
+                              서울특별시 서초구 남부순환로 2620(양재동 11-149번지)
+                        </address>
+                    </div>
+                    <div>
+                        <p>TEL : 080-555-3131 </p>
+                        <p>개인정보관리책임자 : 김경우</p>
+                    </div>
+                    <p>Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
                 
             </div>
         </footer>

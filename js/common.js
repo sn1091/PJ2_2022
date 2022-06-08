@@ -8,10 +8,10 @@ function eventFn() {
     console.log("고고씽~!");
 
     // 2. 대상선정 : .top a -> 상단영역의 모든a
-    var e_indi = document.querySelectorAll(".e_indi a");
+    let e_indi = document.querySelectorAll(".e_indi a");
     console.log("a링크 개수:", e_indi.length, e_indi);
    
-    for (var i = 0; i < e_indi.length; i++) {
+    for (let i = 0; i < e_indi.length; i++) {
         e_indi[i].style.backgroundColor="#cdccd5";
         // alink[순번] -> 구체적인 a요소
         // alink.item(순번) -> 위와 같음!
@@ -27,7 +27,7 @@ function eventFn() {
             // this.innerText 는 a요소 글자
 
             // 1. a요소 텍스트 읽어오기
-            var txt = this.innerText;
+            let txt = this.innerText;
             console.log(txt);
 
 
@@ -35,7 +35,7 @@ function eventFn() {
             // switch case 사용!
 
             // 이동주소변수
-            var m_left = document.querySelector(".list");
+            let m_left = document.querySelector(".list");
             
             switch (txt) {
                 case "1번":
