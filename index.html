@@ -281,11 +281,74 @@
     <div id="search">
         <div class="search">
             <div class="search_bx">
+                <div class="s_input">
+                    <form action="process.php" method="post" class="searchBox">
+                        <div>
+                            <label for="pname" class="pname">제품명</label>
+                            <select name="psel" id="psel">
+                                <option value="init">전체</option>
+                                <option value="A">아이스크림</option>
+                                <option value="B">아이스크림케이크</option>
+                                <option value="C">음료</option>
+                                <option value="D">커피</option>
+                                <option value="E">디저트</option>
+                                <option value="F">block pack</option>
+                                <option value="G">ready pack</option>
+                            </select>
+                            <input type="text" name="pname" id="pname" maxlength="20">
+                            <div>
+                                <label for="hashtag" class="hashtag">해시태그</label>
+                                <input type="text" name="hashtag" id="hashtag">
+                                <div>
+                                    <span>
+                                        <a href="#">#너로정했다이브이</a>
+                                        <a href="#">#이상해씨멜론블라스트</a>
+                                        <a href="#">#푸린피치블라스트</a>
+                                        <a href="#">#포켓몬더블쿠키샌드</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>알레르기 성분</span>
+                            <input type="checkbox" name="egg" id="egg">
+                            <label for="egg" class="al">계란</label>
 
-                
+                            <input type="checkbox" name="bean" id="bean">
+                            <label for="bean" class="al">대두</label>
+
+                            <input type="checkbox" name="pork" id="pork">
+                            <label for="pork" class="al">돼지고기</label>
+
+                            <input type="checkbox" name="peanut" id="peanut">
+                            <label for="peanut" class="al">땅콩</label>
+
+                            <input type="checkbox" name="wheat" id="wheat">
+                            <label for="wheat" class="al">밀</label>
+
+                            <input type="checkbox" name="peach" id="peach">
+                            <label for="peach" class="al">복숭아</label>
+
+                            <input type="checkbox" name="milk" id="milk">
+                            <label for="milk" class="al">우유</label>
+
+                            <input type="checkbox" name="none" id="none">
+                            <label for="none" class="al">없음</label>
+                            
+                            <div class="sbtn">
+                                <button type="submit">검색</button>
+                            </div>
+                        </div>
+                        
+                        
+
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <!----------------------------------------------->
 
     <!--  메인영역 : main -->
     <div id="cont">
