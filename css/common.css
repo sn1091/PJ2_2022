@@ -148,6 +148,7 @@ body{
     bottom: 0;
     right: 0;
     /* background-color: rgba(224, 185, 185, 0.7); */
+    /* display: none; */
 }
 .search{
     position: absolute;
@@ -175,6 +176,10 @@ body{
     margin: 0 auto;
     padding: 25px 0;
     box-sizing: border-box;
+}
+
+.search .fline label, .sline span{
+    font-size: 1.4rem;
 }
 
 

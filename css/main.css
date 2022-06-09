@@ -370,4 +370,8 @@ article h2{
 
 .insta .ict{
     height: 800px;
+    max-width: 1200px;
+    margin:0 auto 100px ;
+
 }
+
