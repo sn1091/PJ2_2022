@@ -148,7 +148,7 @@ body{
     bottom: 0;
     right: 0;
     /* background-color: rgba(224, 185, 185, 0.7); */
-    /* display: none; */
+    display: none;
 }
 .search{
     position: absolute;
@@ -176,13 +176,105 @@ body{
     margin: 0 auto;
     padding: 25px 0;
     box-sizing: border-box;
+    color:#2f231c
 }
 
-.search .fline label, .sline span{
+.search .line1 label, .line2 span{
     font-size: 1.4rem;
+    width: 80px; /* 왜 width안먹히지? */
+    margin-right: 55px;
+}
+.line2 span{
+    margin-right: 10px;
 }
 
+.ib{
+    display: inline-block;
+    vertical-align: top;
+}
+.line1>div:last-child{
+    margin-left: 40px;
+}
+.line1>div:last-child div{
+    margin:10px 0 10px 120px;
+}
+.s_input select{
+    width: 128px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #d1cecc;
+    border-radius: 4px;
+    color: #636363;
+    margin-right: 14px;
+}
 
+.s_input input[type="text"]{
+    width: 260px;
+    height: 32px;
+    padding: 8px 1px 8px 10px;
+    border: none;
+    background: #efefef;
+    font-size: 13px;
+    line-height: 16px;
+    box-sizing: border-box;
+}
+#hashtag{
+    width: 530px;
+}
+
+.htit::before{
+    content: '· 자주 찾는 해시태그';
+    display: block;
+    height: 20px;
+    color: #9c9c9c;
+    margin-right: 10px;
+    font-size: 13px;
+
+}
+
+.line1 span a{
+    color: #ff7c98;
+    margin-right: 6px;
+    font-size: 12px;
+}
+.line2 .chbx{
+    width: 300px;
+}
+.line2 input[type="checkbox"]{
+    border: 1px solid #d1cecc;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+}
+.line2 label{
+    display: inline-block;
+    width: 48px;
+    color: #39261f;
+    font-size: 13px;
+    line-height: 24px;
+    vertical-align: top;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.sbtn{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sbtn button{
+    width: 147px;
+    height: 37px;
+    background: #ff7c98;
+    color: #fff;
+    font-size: 15px;
+    line-height: 37px;
+    border-radius: 18px;
+    border: 0;
+    cursor: pointer;
+    
+}
 
 /**************** 1-6. GNB메뉴 ********************/
 
