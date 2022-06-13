@@ -10,9 +10,9 @@ function eventFn() {
     // 2. 대상선정 : .top a -> 상단영역의 모든a
     let e_indi = document.querySelectorAll(".e_indi a");
     console.log("a링크 개수:", e_indi.length, e_indi);
-   
+    e_indi[0].style.backgroundColor = "black";
     for (let i = 0; i < e_indi.length; i++) {
-        e_indi[i].style.backgroundColor="#cdccd5";
+        
         // alink[순번] -> 구체적인 a요소
         // alink.item(순번) -> 위와 같음!
         // function(){코드} -> 이름없는 함수
@@ -54,7 +54,8 @@ function eventFn() {
                     m_left.style.left = "0px";
                     break;
             } /////// switch case //////
-
+            // 인디케이터 초기화
+            for(let x of e_indi) x.style.backgroundColor = "whitesmoke";
             this.style.backgroundColor="black";
             this.style.transform="scale(1.2)";
             m_left.style.transition ="left .5s";

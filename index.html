@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배스킨라빈스🍧</title>
-    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="./images/favicon.ico">
-
-
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-</head>
-
-<body>
-    <!-- 1. 상단영역 : header-->
-    <div id="top">
-        <header class="ibx top">
-            <div class="top_area">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>배스킨라빈스🍧</title>
+        <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="./images/favicon.ico">
+        
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/media.css">
+        <script src="js/common.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/slideBanner.js"></script>
+    </head>
+    
+    <body>
+        <!-- 1. 상단영역 : header-->
+        <div id="top">
+            <header class="ibx top">
+                <div class="top_area">
                 <!-- 1-1. 로고이미지 -->
                 <h1 id="logo">
                     <a href="index.html">
                         <img src="images/logo_baskinrobbins.png" alt="배스킨라빈스로고">
                     </a>
+                    <!-- 모바일용 햄버거버튼 -->
+                    <button class="ham" onclick="showGNB()"></button>
                 </h1>
                 <!-- 1-2. SNS : 스프라이츠 이용?-->
                 <aside id="sns">
@@ -76,7 +80,7 @@
                             <a href="#">CONTACT US</a>
                         </li>
                         <li>
-                            <a href="#" onclick="search()">
+                            <a href="#">
                                 <img src="./images/icon_search.png" alt="검색버튼">
                             </a>
                         </li>
@@ -266,8 +270,9 @@
                                         </li>
                                     </ol>
                                 </div>
-
                             </li>
+
+
                             <!-- GNB 하단 레이어 -->
                             <div class="gnb_layer">
                                 <div class="gnb_bg"></div>
@@ -275,6 +280,28 @@
                         </ul>
                     </nav>
                 </div>
+            </div>
+            <!-- 모바일용 GNB 만들기 -->
+            <div class="mgnb">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="ir">FLAVOR OF MONTH</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ir"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="ir">고객센터</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
     </div>
@@ -367,45 +394,11 @@
                     <!-- 2-2. 슬라이드 배너 이미지 -->
                     <ul class="slide_banner">
                         <li>
-                            <a href="#">
+                            <a href="#none">
                                 <span class="ir">1번째 배너</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">2번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">3번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">4번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">5번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">6번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">7번째 배너</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="ir">8번째 배너</span>
-                            </a>
-                        </li>
+                        
                     </ul>
 
                     <!-- 2-3. 좌/우 버튼 -->

@@ -277,7 +277,9 @@ body{
 }
 
 /**************** 1-6. GNB메뉴 ********************/
-
+.mgnb{
+    display: none;
+}
 .menu{
     display: flex;
     /* width: 980px; */

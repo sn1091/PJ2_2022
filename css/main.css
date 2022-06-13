@@ -7,7 +7,7 @@
 @import url(reset.css);
 
 body *{
-    outline: 1px dashed limegreen;
+    /* outline: 1px dashed limegreen; */
 }
 
 .cont{
@@ -28,7 +28,7 @@ body *{
 #main_banner a{
     display: block;
     /* 색이반고윙/크  */
-    background: lemonchiffon url(../images/main_banner_june.jpg) no-repeat 50% 0;
+    background: #00A2EA url(../images/main_banner_june.jpg) no-repeat 50% 0;
     height: 150px;
 }
 
@@ -45,62 +45,12 @@ body *{
     position: absolute;
     /* 부모 : #slide_banner */
     top: 0;
-    left:100%;
+    left:0;
     width: 100%;
     height: 697px;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    
 
-}
-/* 1번째 배너 */
-.slide_banner li:nth-child(1){
-    background-image: url(../images/slide_banner1.jpg);
-    background-color: #00A2EA;
-    left: 0;
-}
-/* 2번째 배너 */
-.slide_banner li:nth-child(2){
-    background-image: url(../images/slide_banner2.png);
-    background-color: #1AA1D5;
-}
-/* 3번째 배너 */
-.slide_banner li:nth-child(3){
-    background-image: url(../images/slide_banner3.png);
-    background-color: #FED5BB;
-    
-}
-/* 4번째 배너 */
-.slide_banner li:nth-child(4){
-    background-image: url(../images/slide_banner4.png);
-    background-color: #F6F8F8;
-}
-/* 5번째 배너 */
-.slide_banner li:nth-child(5){
-    background-image: url(../images/slide_banner5.png);
-    background-color: #ffe103;
-}
-/* 6번째 배너 */
-.slide_banner li:nth-child(6){
-    background-image: url(../images/slide_banner6.png);
-    background-color: #fb637e;
-}
-/* 7번째 배너 */
-.slide_banner li:nth-child(7){
-    background-image: url(../images/slide_banner7.png);
-    background-color: #dbeffb;
-    
-}
-/* 8번째 배너 */
-.slide_banner li:nth-child(8){
-    background-image: url(../images/slide_banner8.png);
-    background-color: #5eb640;
-
-}
-
-@keyframes slideAni {
-
-    
 }
 
 
@@ -169,9 +119,9 @@ article h2{
 } */
 
 /* 3-2,3-3. 이벤트 이미지, 내용 영역 */
-.event_list{
+/* .event_list{
    
-}
+} */
 .event_list ul{
     position: relative;
     width: 1200px;
@@ -190,6 +140,7 @@ article h2{
     width: 300px;
     height: 465px;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 
 
