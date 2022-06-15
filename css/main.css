@@ -119,22 +119,29 @@ article h2{
 } */
 
 /* 3-2,3-3. 이벤트 이미지, 내용 영역 */
-/* .event_list{
-   
-} */
-.event_list ul{
-    position: relative;
+.event_list{
+     position: relative;
     width: 1200px;
     height: 465px;
     margin: 0 auto;
     overflow: hidden;
+
 }
-.event_list .list{
+
+.event_list ul{
     position: absolute;
     top: 0;
     left: 0;
-    width: 400%;
+    width: 100%;
 }
+
+.event_list ul:nth-child(1)~ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+}
+
 .event_list li{
     float:left;
     width: 300px;
