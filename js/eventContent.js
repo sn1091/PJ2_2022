@@ -9,7 +9,7 @@ function eventFn() {
 
     // 2. 대상선정 : .e_indi a -> 상단영역의 모든a
     let e_indi = document.querySelectorAll(".e_indi a");
-    console.log("a링크 개수:", e_indi.length, e_indi);
+    // console.log("a링크 개수:", e_indi.length, e_indi);
     e_indi[0].style.backgroundColor = "black";
 
     // 3. 변경대상 : 이동할 블럭 : .event_list ul
@@ -44,7 +44,7 @@ function eventFn() {
 
             // 선택한 블록 보이도록 설정
             block[i].style.left = "0";
-            // block[i].style.zIndex="11";
+            block[i].style.zIndex="111";
             
             // 선택한 블록 이후 블록들을 오른쪽으로 이동
             for(let y=3;y>i;y--)
