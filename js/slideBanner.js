@@ -97,6 +97,8 @@ window.addEventListener("load", () => {
         // 잠금설정을 prot = 0으로 해제
         //////////////////////////////////////////
 
+        // 인터발 지우기 함수 호출!
+        clearAuto();
 
         // dir - 버튼구분(1-오른쪽,0-왼쪽)
         // 1. 호출확인
@@ -158,8 +160,37 @@ window.addEventListener("load", () => {
     // 이벤트 대상: .slide_banner li
     // goSlide();
     // 자동 슬라이드 
-    setInterval(() => {goSlide(1);}, 4000);
+    // setInterval(() => {goSlide(1);}, 4000);
     // setInterval(goSlide(1), 3500);
-   
+  
+ // 인터발용변수
+let autoI;
+
+let autoT;
+
+
+// 인터발 셋팅 함수 ///////////////
+const autoCall= () =>
+autoI = setInterval(() => {goSlide(1);}, 4000);
+
+// 인터발 셋팅 함수 최초호출!
+autoCall();
+
+// 인터발 지우기 함수////////////////
+const clearAuto = () => {
+  console.log("인터발지움!");
+  // 인터발지우기
+  clearInterval(autoI);
+
+  // 타임아웃지우기(실행쓰나미방지!)
+  clearTimeout(autoT);
+
+  // 일정시간후 인터발 셋팅(2초후)
+  autoT = setTimeout(autoCall,2000);
+  // 매번 타임아웃을 변수에 담고 먼저 지우기 때문에
+  // 최종적으로 남는 타임아웃은 하나뿐이다!
+  // 따라서 타임아웃 실행 쓰나미가 발생하지 않는다
+
+}; ///////// clearAuto 함수 ///////////
 
 }); /////////// 로드구역 ///////////////////

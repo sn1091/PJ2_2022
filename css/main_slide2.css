@@ -41,51 +41,70 @@ body *{
 #main_banner img{
     display: none;
 }
-
-/* 2-2. 슬라이드 배너 : #slide_banner */
 #slide_banner{
-    position: relative;
+    /* position: relative; */
     /* 자식 : .slide_banner li(배너이미지), .btns(좌/우버튼) */
+    width: 1600px;
+    height: 697px;
+    margin: 0 auto;
+}
+#slide_banner section {
+    /*슬라이드부모*/
+    position: relative;
     width: 100%;
     height: 697px;
+    float: left;
     overflow: hidden;
-    
+    /*넘치는 자식요소 숨기기*/
+    /*    border: 2px solid red;*/
+    box-sizing: border-box;
 }
-.slide_banner li{
+
+/* 2-2. 슬라이드 배너 : #slide */
+#slide {
+    display: flex;
+    /* 플렉스박스!!! */
+
+    /*사진을 싸고 있는 슬라이드*/
     position: absolute;
-    /* 부모 : #slide_banner */
     top: 0;
-    left:0;
-    width: 100%;
-    height: 697px;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-
-}
-
-
-/* 부모 li 만큼 꽉차게 만듦 */
-.slide_banner a{
-    display: block;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
+#slide li {
+    flex-shrink: 0;
+    /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+    flex-basis: 100%;
+    /* 가로크기를 부모박스 크기에 맞춤! */
+    /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+}
+
+#slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 비율유지 채우기! */
+}
+
 /******* 2-3. 좌/우버튼 ********/
-.btns a{
+.abtn a{
     position: absolute;
     /* 부모 : #slide_banner */
     top: 50%;
 }
-.btns a:first-child{
+.abtn a:first-child{
     left: 50px;
 }
-.btns a:last-child{
+.abtn a:last-child{
     right: 50px;
 }
 
 /******** 2-4. 하단 인디케이터 ********/
-.indi{
+.indic{
     position: absolute;
     /* 부모 : #slide_banner */
     bottom: 10px;
@@ -94,20 +113,26 @@ body *{
     /* height: 35px; */
     transform: translateX(-50%);
 }
-.indi a{
+.indic a{
     display: inline-block;
     width: 13px;
     height: 13px;
     border-radius: 50%;
     background-color: whitesmoke;
     margin: 10px;
-    transition: background-color .2s, scale .2s;
+    cursor: auto;
+    /* transition: background-color .2s, scale .2s; */
 }
 
-.indi a:hover{
+.indic .on{
     transform: scale(1.1);
     background-color: black;
 }
+
+/* .indic a:hover{
+    transform: scale(1.1);
+    background-color: black;
+} */
 
 /********************** 상단 배너 영역 끝 **********************/
 /* 이벤트,메뉴,스토어딜리버리 타이틀 공통 */

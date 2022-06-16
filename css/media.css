@@ -49,8 +49,22 @@
   /* 햄버거 버튼 모양 가상요소로 문자넣기
   이유: x버튼으로 변경가능하도록 하려고 */
 
-  
 
 }
 
 /************** 1200px 이하 미디어쿼리 끝 **************/
+
+@media screen and (max-width: 720px) {
+    .ibx{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    #main_banner img:first-child{
+        display: none;
+    }
+    #main_banner img:last-child{
+        display: block;
+        max-width: 100%;
+    }
+      
+}
