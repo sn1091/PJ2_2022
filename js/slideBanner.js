@@ -70,6 +70,38 @@ window.addEventListener("load", () => {
     // 인디케이터 첫번째 색 설정
     indi[0].style.backgroundColor = "black";
 
+     // 인터발용변수
+let autoI;
+
+let autoT;
+
+
+// 인터발 셋팅 함수 ///////////////
+const autoCall= () =>
+autoI = setInterval(() => {goSlide(1);}, 4000);
+
+// 인터발 셋팅 함수 최초호출!
+autoCall();
+
+// 인터발 지우기 함수////////////////
+const clearAuto = () => {
+  console.log("인터발지움!");
+  // 인터발지우기
+  clearInterval(autoI);
+
+  // 타임아웃지우기(실행쓰나미방지!)
+  clearTimeout(autoT);
+
+  // 일정시간후 인터발 셋팅(2초후)
+  autoT = setTimeout(autoCall,2000);
+  // 매번 타임아웃을 변수에 담고 먼저 지우기 때문에
+  // 최종적으로 남는 타임아웃은 하나뿐이다!
+  // 따라서 타임아웃 실행 쓰나미가 발생하지 않는다
+
+}; ///////// clearAuto 함수 ///////////
+
+
+
     /////// 좌/우버튼 동작 설정 ////////////////////
 
     // 이벤트 대상: 좌/우 이동버튼
@@ -90,7 +122,7 @@ window.addEventListener("load", () => {
 
         // console.log("광클막기",prot);
         ////////// 광클금지 ///////////////////////
-        if(prot) return; // 돌아가!
+        if(prot) return false; // 돌아가!
         prot = 1; // 잠금!
         setTimeout(()=>prot=0,400);
         // 타임아웃으로 슬라이드이동 후
@@ -129,7 +161,7 @@ window.addEventListener("load", () => {
         // 선택한 인디 블랙으로 변경
         // 인디 번호보다 배열번호는 1작다!
         indi[inum-1].style.backgroundColor = "black";
-        
+        return false;
     }; ///////////// goSlide 함수 /////////////
     ///////////////////////////////////////////
     
@@ -141,6 +173,7 @@ window.addEventListener("load", () => {
         this.style.backgroundColor = "black";
         mimg.style.backgroundImage = `url(./images/slide_banner${i+1}.png)`;
         mimg.style.backgroundColor = bcolor[i];
+        return false;
         }
     }
 
@@ -163,34 +196,6 @@ window.addEventListener("load", () => {
     // setInterval(() => {goSlide(1);}, 4000);
     // setInterval(goSlide(1), 3500);
   
- // 인터발용변수
-let autoI;
 
-let autoT;
-
-
-// 인터발 셋팅 함수 ///////////////
-const autoCall= () =>
-autoI = setInterval(() => {goSlide(1);}, 4000);
-
-// 인터발 셋팅 함수 최초호출!
-autoCall();
-
-// 인터발 지우기 함수////////////////
-const clearAuto = () => {
-  console.log("인터발지움!");
-  // 인터발지우기
-  clearInterval(autoI);
-
-  // 타임아웃지우기(실행쓰나미방지!)
-  clearTimeout(autoT);
-
-  // 일정시간후 인터발 셋팅(2초후)
-  autoT = setTimeout(autoCall,2000);
-  // 매번 타임아웃을 변수에 담고 먼저 지우기 때문에
-  // 최종적으로 남는 타임아웃은 하나뿐이다!
-  // 따라서 타임아웃 실행 쓰나미가 발생하지 않는다
-
-}; ///////// clearAuto 함수 ///////////
 
 }); /////////// 로드구역 ///////////////////

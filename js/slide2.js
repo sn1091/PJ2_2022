@@ -69,7 +69,7 @@ for(let x of abtn){ // x는 a요소 자신
 
         // console.log("광클막기",prot);
         ////////// 광클금지 ///////////////////////
-        if(prot) return; // 돌아가!
+        if(prot) return false; // 돌아가!
         prot = 1; // 잠금!
         setTimeout(()=>prot=0,410);
         // 타임아웃으로 슬라이드이동 후
@@ -122,6 +122,7 @@ for(let x of abtn){ // x는 a요소 자신
             //  즉,오른쪽/왼쪽 정보값을 보내준다!
         } ///////////// else //////////
 
+        return false;
 
     }; /////// click////////
 
@@ -217,7 +218,6 @@ const clearAuto = () => {
     // 따라서 타임아웃 실행 쓰나미가 발생하지 않는다
 
 }; ///////// clearAuto 함수 ///////////
-
 
 
 } ////////// loadFn 함수 ///////////

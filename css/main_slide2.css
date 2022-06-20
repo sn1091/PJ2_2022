@@ -61,7 +61,7 @@ body *{
 }
 
 /* 2-2. 슬라이드 배너 : #slide */
-#slide {
+.slide{
     display: flex;
     /* 플렉스박스!!! */
 
@@ -73,7 +73,11 @@ body *{
     height: 100%;
 }
 
-#slide li {
+.ms{
+    display: none;
+}
+
+.slide li {
     flex-shrink: 0;
     /* 부모박스크기만큼 줄어들지 않음 -> 0 */
     flex-basis: 100%;
@@ -82,7 +86,7 @@ body *{
     등분할시 자동 100%임! */
 }
 
-#slide li img {
+.slide li img {
     /*이미지는 박스에 맞춤!*/
     width: 100%;
     height: 100%;
