@@ -2,6 +2,21 @@
 /* 공통핵심 CSS - core.css */
 /* 웹폰트, 공용클래스 */
 
+/***********  웹폰트 ***********/
+
+/* import방식 CDN 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+/* 나눔바른고딕 */
+@font-face {
+    font-family: nbg;
+    src: url(../fonts/NanumBarunGothicLightSubset.woff) format("woff");
+  }
+
+html {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* 공통클래스 */
 .ibx{
     max-width: 1920px;

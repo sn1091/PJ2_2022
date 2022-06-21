@@ -97,6 +97,17 @@
 
 }
 
+/* 검색창 버튼 */
+.sb.on::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background-image: url(../images/btn_search_close.gif);
+    width: 50px;
+    height: 50px;
+    z-index: 999999;
+  }
+
 /******* GNB영역박스 ******/
 #gnb{
     position: relative;
@@ -161,7 +172,7 @@ body{
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgb(0 0 0 / 70%);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 111;
 }
 
@@ -278,6 +289,10 @@ body{
     border: 0;
     cursor: pointer;
     
+}
+/* 검색창 노출 */
+#search.on{
+    display: block;
 }
 
 /**************** 1-6. GNB메뉴 ********************/
@@ -493,7 +508,7 @@ body{
     color: #b1ab9f;
     font-size: 11px;
     text-align: left;
-    box-shadow: 2px 2px 2px 0px rgb(234 233 232 / 80%);
+    box-shadow: 2px 2px 2px 0px rgba(234, 233, 232, 0.8);
     
 }
 select:focus{

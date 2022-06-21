@@ -6,9 +6,9 @@
 @import url(common.css);
 @import url(reset.css);
 
-body *{
+/* body *{
     outline: 1px dashed limegreen;
-}
+} */
 
 .cont{
      /* 화면채움! */
@@ -41,51 +41,74 @@ body *{
 #main_banner img{
     display: none;
 }
-
-/* 2-2. 슬라이드 배너 : #slide_banner */
 #slide_banner{
-    position: relative;
+    /* position: relative; */
     /* 자식 : .slide_banner li(배너이미지), .btns(좌/우버튼) */
+    width: 1600px;
+    height: 697px;
+    margin: 0 auto;
+}
+#slide_banner section {
+    /*슬라이드부모*/
+    position: relative;
     width: 100%;
     height: 697px;
+    float: left;
     overflow: hidden;
-    
+    /*넘치는 자식요소 숨기기*/
+    /*    border: 2px solid red;*/
+    box-sizing: border-box;
 }
-.slide_banner li{
+
+/* 2-2. 슬라이드 배너 : #slide */
+.slide{
+    display: flex;
+    /* 플렉스박스!!! */
+
+    /*사진을 싸고 있는 슬라이드*/
     position: absolute;
-    /* 부모 : #slide_banner */
     top: 0;
-    left:0;
-    width: 100%;
-    height: 697px;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-
-}
-
-
-/* 부모 li 만큼 꽉차게 만듦 */
-.slide_banner a{
-    display: block;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
+.ms{
+    display: none;
+}
+
+.slide li {
+    flex-shrink: 0;
+    /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+    flex-basis: 100%;
+    /* 가로크기를 부모박스 크기에 맞춤! */
+    /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+}
+
+.slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 비율유지 채우기! */
+}
+
 /******* 2-3. 좌/우버튼 ********/
-.btns a{
+.abtn a{
     position: absolute;
     /* 부모 : #slide_banner */
     top: 50%;
 }
-.btns a:first-child{
+.abtn a:first-child{
     left: 50px;
 }
-.btns a:last-child{
+.abtn a:last-child{
     right: 50px;
 }
 
 /******** 2-4. 하단 인디케이터 ********/
-.indi{
+.indic{
     position: absolute;
     /* 부모 : #slide_banner */
     bottom: 10px;
@@ -94,20 +117,26 @@ body *{
     /* height: 35px; */
     transform: translateX(-50%);
 }
-.indi a{
+.indic a{
     display: inline-block;
     width: 13px;
     height: 13px;
     border-radius: 50%;
     background-color: whitesmoke;
     margin: 10px;
-    transition: background-color .2s, scale .2s;
+    cursor: auto;
+    /* transition: background-color .2s, scale .2s; */
 }
 
-.indi a:hover{
+.indic .on{
     transform: scale(1.1);
     background-color: black;
 }
+
+/* .indic a:hover{
+    transform: scale(1.1);
+    background-color: black;
+} */
 
 /********************** 상단 배너 영역 끝 **********************/
 /* 이벤트,메뉴,스토어딜리버리 타이틀 공통 */
@@ -131,7 +160,7 @@ article h2{
 /* 3-2,3-3. 이벤트 이미지, 내용 영역 */
 .event_list{
      position: relative;
-    width: 1200px;
+    width: 1210px;
     height: 465px;
     margin: 0 auto;
     overflow: hidden;
@@ -142,14 +171,18 @@ article h2{
     position: absolute;
     top: 0;
     left: 0;
+    width: 0;
+    overflow: hidden;
+    transition: left .5s ease-in-out;
+}
+
+.event_list ul.on{
     width: 100%;
 }
 
+
 .event_list ul:nth-child(1)~ul{
-    position: absolute;
-    top: 0;
     left: 100%;
-    width: 100%;
 }
 
 .event_list li{
@@ -158,6 +191,10 @@ article h2{
     height: 465px;
     box-sizing: border-box;
     margin-top: 10px;
+}
+
+.event_list ul li:first-child{
+    margin-left: 10px;
 }
 
 
@@ -192,7 +229,11 @@ article h2{
     border-radius: 50%;
     background-color: #cdccd5;
     margin: 10px;
-    transition: background-color .2s, scale .2s;
+    transition: background-color .2s, transform .2s;
+}
+.e_indi a.on{
+    transform: scale(1.2);
+    background-color: black;
 }
 
 .e_indi a:hover{

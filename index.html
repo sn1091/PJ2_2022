@@ -10,9 +10,16 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 제이쿼리 UI -->
+    <script src="js/jquery-ui.min.js"></script>
+
     <script src="js/eventContent.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/insta.js"></script>
     <script src="js/slideBanner.js"></script>
+    <script src="js/search.js"></script>
 </head>
 
 <body>
@@ -26,7 +33,7 @@
                         <img src="images/logo_baskinrobbins.png" alt="배스킨라빈스로고">
                     </a>
                     <!-- 모바일용 햄버거버튼 -->
-                    <button class="ham" onclick="showGNB()"></button>
+                    <button class="ham on"></button>
                 </h1>
                 <!-- 1-2. SNS : 스프라이츠 이용?-->
                 <aside id="sns">
@@ -80,7 +87,7 @@
                             <a href="#">CONTACT US</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="sb">
                                 <img src="./images/icon_search.png" alt="검색버튼">
                             </a>
                         </li>
@@ -88,7 +95,7 @@
                 </aside>
             </div>
 
-            <!---------  GNB 영역 ----------->
+            <!-- **********GNB 영역************-->
             <div id="gnb">
                 <div class="menu_area">
                     <!-- 1-3. 로그인메뉴 : 로그인, 회원가입 -->
@@ -305,7 +312,7 @@
             </div>
         </header>
     </div>
-    <!---------- 검색창 ---------------------------->
+    <!-- ***********검색창*************** -->
     <div id="search">
         <div class="search">
             <div class="search_bx">
@@ -376,7 +383,7 @@
             </div>
         </div>
     </div>
-    <!----------------------------------------------->
+    <!--********************************************************-->
 
     <!--  메인영역 : main -->
     <div id="cont">
@@ -386,63 +393,75 @@
                 <!-- 2-1. 상단 띠배너 -->
                 <div id="main_banner">
                     <a href="#">
-                        <!-- <span class="ir">상단띠배너 - 이달의 맛</span> -->
+                        <span class="ir">상단띠배너 - 이달의 맛</span>
                         <!-- <img src="images/main_banner_june.jpg" alt="이달의맛 배너"> -->
-                        <img src="images_m/m_banner_june.jpg" alt="이달의맛 배너">
+                        <!-- <img src="images_m/m_banner_june.jpg" alt="이달의맛 배너"> -->
                     </a>
                 </div>
                 <!-- 2-2. 슬라이드배너(빌보드배너) -->
                 <div id="slide_banner">
-                    <!-- 2-2. 슬라이드 배너 이미지 -->
-                    <ul class="slide_banner">
-                        <li>
-                            <a href="#none">
-                                <span class="ir">1번째 배너</span>
+                    <section>
+                        <!-- 2-2. 슬라이드 배너 이미지 -->
+                        <!--슬라이드-->
+                        <ul class="slide">
+                            <li><img src="images/slide_banner1.png" alt="slide"></li>
+                            <li><img src="images/slide_banner2.png" alt="slide"></li>
+                            <li><img src="images/slide_banner3.png" alt="slide"></li>
+                            <li><img src="images/slide_banner4.png" alt="slide"></li>
+                            <li><img src="images/slide_banner5.png" alt="slide"></li>
+                            <li><img src="images/slide_banner6.png" alt="slide"></li>
+                            <li><img src="images/slide_banner7.png" alt="slide"></li>
+                            <li><img src="images/slide_banner8.png" alt="slide"></li>
+                        </ul>
+                        <ul class="slide ms">
+                            <li><img src="images_m/slide_banner1.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner2.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner3.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner4.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner5.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner6.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner7.png" alt="slide"></li>
+                            <li><img src="images_m/slide_banner8.png" alt="slide"></li>
+                        </ul>
+                        <!-- 2-3. 좌/우 버튼 -->
+                        <div class="abtn">
+                            <!-- 이전 버튼 -->
+                            <a href="#">
+                                <img src="./images/btn_banner_prev.png" alt="이전 버튼">
                             </a>
-                        </li>
-
-                    </ul>
-
-                    <!-- 2-3. 좌/우 버튼 -->
-                    <div class="btns">
-                        <!-- 이전 버튼 -->
-                        <a href="#">
-                            <img src="./images/btn_banner_prev.png" alt="이전 버튼">
-                        </a>
-                        <!-- 이후 버튼 -->
-                        <a href="#">
-                            <img src="./images/btn_banner_next.png" alt="이후 버튼">
-                        </a>
-                    </div>
-
-                    <!-- 2-4. 하단 인디케이터 -->
-                    <div class="indi">
-                        <a href="#">
-                            <span class="ir">1번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">2번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">3번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">4번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">5번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">6번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">7번 인디케이터</span>
-                        </a>
-                        <a href="#">
-                            <span class="ir">8번 인디케이터</span>
-                        </a>
-
-                    </div>
+                            <!-- 이후 버튼 -->
+                            <a href="#" class="ab2">
+                                <img src="./images/btn_banner_next.png" alt="이후 버튼">
+                            </a>
+                        </div>
+                        <!-- 2-4. 하단 인디케이터 -->
+                        <div class="indic">
+                            <a href="#">
+                                <span class="ir">1번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">2번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">3번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">4번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">5번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">6번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">7번 인디케이터</span>
+                            </a>
+                            <a href="#">
+                                <span class="ir">8번 인디케이터</span>
+                            </a>
+                        </div>
+                    </section>
 
                 </div>
             </div>
@@ -457,7 +476,7 @@
                 <!-- 3-2,3-3. 이벤트 이미지,내용 -->
                 <div class="event_list">
                     <!-- 1번째 버튼 -->
-                    <ul>
+                    <ul class="on">
                         <li>
                             <a href="#">
                                 <img src="./images/banner_delivery.png" alt="해피오더">
@@ -599,13 +618,11 @@
                             </a>
                         </li>
                     </ul>
-
-                    </ul>
                 </div>
 
                 <!-- 3-4. 인디케이터 -->
                 <div class="e_indi">
-                    <a href="#none">
+                    <a href="#none" class="on">
                         <span class="ir">1번</span>
                     </a>
                     <a href="#none">
