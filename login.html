@@ -8,9 +8,12 @@
     <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="./images/favicon.ico">
 
     <!-- 스와이퍼 플러그인 CSS-->
+        <!-- fontisto css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <!-- 스와이퍼 플러그인 -->
     <script src="js/swiper-bundle.min.js"></script>
@@ -19,13 +22,8 @@
     <!-- 제이쿼리 UI -->
     <script src="js/jquery-ui.min.js"></script>
 
-    <!-- 이벤트 컨텐츠 영역 JS -->
-    <script src="js/eventContent.js"></script>
-    <!-- 인스타그램 영역 JS -->
-    <script src="js/insta.js"></script>
-    <!-- <script src="js/slideBanner.js"></script> -->
-    <!-- 슬라이드배너 플러그인용 JS -->
-    <script src="js/slide_plugin.js"></script>
+    <!-- 로그인 JS -->
+    <script src="js/login.js"></script>
     <script src="js/search.js"></script>
 </head>
 
@@ -395,355 +393,50 @@
     <!--  메인영역 : main -->
     <div id="cont">
         <main class="ibx cont">
-            <!-- 2. 상단 배너 영역 -->
-            <div>
-                <!-- 2-1. 상단 띠배너 -->
-                <div id="main_banner">
-                    <a href="#">
-                        <span class="ir">상단띠배너 - 이달의 맛</span>
-                        <!-- <img src="images/main_banner_june.jpg" alt="이달의맛 배너"> -->
-                        <!-- <img src="images_m/m_banner_june.jpg" alt="이달의맛 배너"> -->
-                    </a>
-                </div>
-                <!-- 2-2. 슬라이드배너(빌보드배너) -->
-                <!-- <div id="slide_banner">
-                    <section>
-                        2-2. 슬라이드 배너 이미지
-                        <ul class="slide">
-                            <li><img src="images/slide_banner1.png" alt="slide"></li>
-                            <li><img src="images/slide_banner2.png" alt="slide"></li>
-                            <li><img src="images/slide_banner3.png" alt="slide"></li>
-                            <li><img src="images/slide_banner4.png" alt="slide"></li>
-                            <li><img src="images/slide_banner5.png" alt="slide"></li>
-                            <li><img src="images/slide_banner6.png" alt="slide"></li>
-                            <li><img src="images/slide_banner7.png" alt="slide"></li>
-                            <li><img src="images/slide_banner8.png" alt="slide"></li>
-                        </ul>
-                        <ul class="slide ms">
-                            <li><img src="images_m/slide_banner1.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner2.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner3.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner4.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner5.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner6.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner7.png" alt="slide"></li>
-                            <li><img src="images_m/slide_banner8.png" alt="slide"></li>
-                        </ul>
-                        2-3. 좌/우 버튼
-                        <div class="abtn">
-                            이전 버튼
-                            <a href="#">
-                                <img src="./images/btn_banner_prev.png" alt="이전 버튼">
-                            </a>
-                            이후 버튼
-                            <a href="#" class="ab2">
-                                <img src="./images/btn_banner_next.png" alt="이후 버튼">
-                            </a>
-                        </div>
-                        2-4. 하단 인디케이터
-                        <div class="indic">
-                            <a href="#">
-                                <span class="ir">1번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">2번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">3번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">4번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">5번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">6번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">7번 인디케이터</span>
-                            </a>
-                            <a href="#">
-                                <span class="ir">8번 인디케이터</span>
-                            </a>
-                        </div>
-                    </section>
 
-                </div> -->
-
-                <section class="scont">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner1.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner2.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner3.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner4.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner5.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner6.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner7.png" alt="슬라이드배너">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="images/slide_banner8.png" alt="슬라이드배너">
-                          </div>
+            <!-- 1. 로그인 타이틀 -->
+            <div class="tcont">
+                <h2 class="stit">
+                    <img src="./images/h_login.png" alt="login">
+                </h2>
+                <p>배스킨 라빈스 홈페이지에 오신 것을 환영합니다.</p>
+            </div>
+            <!-- 2. 로그인 박스 -->
+            <div class="login_box">
+                <section class="lcont">
+                    <h3>배스킨라빈스 로그인</h3>
+                    <p>해피포인트 아이디로 간편하게 로그인 하세요.</p>
+                    <form action="process.php" method="post" class="logF">
+                        <div class="inbox">
+                            <!-- 아이디박스 -->
+                            
+                                <!-- <label for="mid">아이디</label> -->
+                                <div class="input_box">
+                                    <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디를 입력하세요">
+                                    <i class="fi fi-person"></i>
+                                </div>
+                                <!-- 비밀번호박스 -->
+                                <!-- <label for="mpw">비밀번호</label> -->
+                                <div class="input_box">
+                                    <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호를 입력하세요">
+                                    <i class="fi fi-unlocked"></i>
+                                </div>
+                            
+                            <!-- 버튼영역 -->
+                            <div class="btnbx">
+                                <input type="submit" id="sbtn" value="로그인">
+                            </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                      </div>
+                        <!-- 기타링크 -->
+                        <div class="addbx">
+                            <a href="#">아이디찾기</a>
+                            <a href="#">비밀번호찾기</a>
+                            <a href="#">회원가입</a>
+                        </div>
+                    </form>
                 </section>
             </div>
 
-            <!-- 3. 이벤트 컨텐츠 -->
-            <article class="event">
-                <!-- 3-1. 이벤트 타이틀 -->
-                <h2>
-                    <img src="./images/h_event.png" alt="이벤트">
-                </h2>
-
-                <!-- 3-2,3-3. 이벤트 이미지,내용 -->
-                <div class="event_list">
-                    <!-- 1번째 버튼 -->
-                    <ul class="on">
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner_delivery.png" alt="해피오더">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">해피오더 딜리버리로 간편하게 주문하세요!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner_delivery_bm.png" alt="배달의민족">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">배달의 민족에서 빠르게 주문하세요!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner_delivery_ygy.png" alt="요기요">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">요기요에서 손쉽게 주문하세요!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner_delivery_kakao.png" alt="카카오톡">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">카카오톡 주문하기에서 편리하게 주문하세요!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- 2번째 버튼 -->
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner2_1.png" alt="제주빙수3종">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">배스킨라빈스 제주 빙수 3종 출시!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner2_2.png" alt="기아멤버스할인">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">기아 멤버스 최대 50% 제휴 혜택</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner2_3.png" alt="제휴혜택">
-                                <span class="type">
-                                    <img src="./images/stit_online.gif" alt="store event">
-                                </span>
-                                <span class="title">2022 배스킨라빈스 특별한 제휴혜택</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner2_4.png" alt="콜드브루오트라떼">
-                                <span class="type">
-                                    <img src="./images/stit_online.gif" alt="store event">
-                                </span>
-                                <span class="title">고소한 오트밀크와 깔끔한 콜드브루의 만남, 콜드브루 오트라떼 출시</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- 3번째 버튼 -->
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner3_1.png" alt="KT할인">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">KT 멤버십 고객이라면 누구나 파인트 30% 할인!</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner3_2.png" alt="Mpoint 50%사용">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">현대카드 M포인트 50% 사용</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/banner3_3.png" alt="배스킨라빈체">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">2018 한글날 기념 무료 글꼴 공개! 배스킨라빈스체</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner3_4.png" alt="텀블러할인">
-                                <span class="type">
-                                    <img src="./images/stit_online.gif" alt="store event">
-                                </span>
-                                <span class="title">1회용 컵 사용 줄이기 안내</span>
-                                <span class="period">상시진행</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- 4번째 버튼 -->
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./images/banner4.png" alt="BEST 칭찬 점포">
-                                <span class="type">
-                                    <img src="./images/stit_store.gif" alt="store event">
-                                </span>
-                                <span class="title">2022년 1분기 고객 BEST 칭찬점포 안내</span>
-                                <span class="period"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- 3-4. 인디케이터 -->
-                <div class="e_indi">
-                    <a href="#none" class="on">
-                        <span class="ir">1번</span>
-                    </a>
-                    <a href="#none">
-                        <span class="ir">2번</span>
-                    </a>
-                    <a href="#none">
-                        <span class="ir">3번</span>
-                    </a>
-                    <a href="#none">
-                        <span class="ir">4번</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- 3-5. 메뉴컨텐츠 : 메뉴이동 영역 -->
-            <article class="menu_ct">
-                <!-- 타이틀 -->
-
-                <h2>
-                    <img src="./images/h_menu.png" alt="메뉴타이틀">
-                </h2>
-
-                <!-- 이미지 영역 -->
-                <div class="m_img">
-                    <div class="mbx">
-                        <img src="./images/img_menu_list_220429.png" alt="메뉴리스트 이미지">
-                        <a href="#" class="icecream"></a>
-                        <a href="#" class="cake"></a>
-                        <a href="#" class="beverage"></a>
-                        <a href="#" class="coffee"></a>
-                        <a href="#" class="gift"></a>
-                        <a href="#" class="dessert"></a>
-                    </div>
-                </div>
-
-            </article>
-
-            <!-- 스토어 & 딜리버리 영역 -->
-            <article id="str_dv">
-                <div class="clb str_dv">
-                    <section class="store">
-                        <h2>
-                            <img src="./images/h_store.png" alt="스토어 타이틀">
-                        </h2>
-                        <div class="sd_img">
-                            <a href="#">
-                                <img src="./images/img_store.jpg" alt="매장찾기">
-                            </a>
-                        </div>
-                    </section>
-                    <section class="delievery">
-                        <h2>
-                            <img src="./images/h_happyorder_delivery.png" alt="해피오더딜리버리 타이틀">
-                        </h2>
-                        <div class="sd_img">
-                            <a href="#">
-                                <img src="./images/img_happyorder_delivery.png" alt="해피오더딜리버리 타이틀">
-                            </a>
-                        </div>
-                    </section>
-                </div>
-            </article>
-
-            <!-- 인스타그램 -->
-            <article class="insta">
-                <!-- 3-8. 타이틀 영역 -->
-                <div class="itit">
-                    <h2>
-                        <img src="./images/tit_sns.png" alt="배스킨라빈스 인스타그램">
-                    </h2>
-                </div>
-                <div class="ict">
-                    <div class="attractt-container" data-idx="0" data-code="LEDo66DdnaG4Rdw" data-board="grid">
-
-                        <iframe title="Attractt - UGC 디지털 마케팅 솔루션" scrolling="no" frameborder="0"
-                            src="https://www.attractt.com/embed/grid/LEDo66DdnaG4Rdw?loc=http://www.baskinrobbins.co.kr/&amp;target=attractt-ifm-0"
-                            id="attractt-ifm-0"
-                            style="width: 1200px; height: 785px; overflow: hidden; border: 0px;"></iframe></div>
-                </div>
-
-            </article>
         </main>
     </div>
 

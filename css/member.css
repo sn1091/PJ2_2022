@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* 2. 메인영역 CSS */
+
+@import url(core.css);
+@import url(common.css);
+@import url(reset.css);
+
+body *{
+    /* outline: 1px dashed limegreen; */
+}
+input:focus {
+    outline: none;
+}
+
+/* 로그인 타이틀 영역 */
+.tcont{
+    padding: 120px 0 35px;
+    text-align: center;
+}
+.tcont h2{
+    font-size: 26px;
+}
+.tcont p{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+/* 로그인 박스 */
+.member_box{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 46px;
+    border-top: 2px solid #ff99bf;
+    border-bottom: 2px solid #ff99bf;
+    margin-bottom: 100px;
+    
+}
+/* 입력박스 겉박스 */
+.mcont{
+    width: 400px;
+    margin: 0 auto;
+}
+/* 입력박스 타이틀 */
+.mcont h3{
+    font-size: 17px;
+    color: #2f231c;
+    padding-bottom: 5px;
+}
+.mcont p{
+    padding-bottom: 20px;
+    font-size: 12px;
+    color: #ff7c98;
+}
+/* 라벨공통 타이틀(.itit) */
+.itit {
+    display: inline-block;
+    width: 100px;
+    font-size: 13px;
+}
+
+.mcont li{
+    height: 60px;
+}
+/* 입력창 속성*/
+.mcont input[type="text"],
+.mcont input[type="password"]{
+    width: 270px;
+    height: 30px;
+    color: #696663;
+    font-size: 11px;
+    border: 0;
+    background: #efefef;
+    box-sizing:content-box;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+/* 성별명 */
+li.gender{
+    height: 30px;    
+    font-size: 13px;
+}
+
+/* 성별 라디오 버튼 */
+.gender input[type="radio"]{
+    vertical-align: text-bottom;
+    margin-right: 30px;
+}
+/* 이메일 골뱅이 글자 */
+.gol{
+    font-size: 13px;
+}
+/* 이메일 입력창 사이즈 조절 */
+.email input[type="text"]{
+    width: 130px;
+}
+
+/* 이메일 뒷주소 선택창 */
+select:focus{
+    outline: none;
+}
+#seleml{
+width: 120px;
+height: 30px;
+border: 1px solid #b1ab9f;
+border-radius: 5px;
+color: #696663;
+font-size: 11px;
+}
+
+
+/* 이메일 뒷주소 직접입력 */
+#email2 {
+    width: 110px;
+    float: right;
+    margin-right: 15px;
+    margin-top: -15px;
+    /* 처음에 안보임 */
+    display: none;
+}
+
+/* 로그인버튼 */
+.btnbx input[type="submit"]{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 59px;
+    border: 0;
+    background: #f56f98;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 59px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/* 입력창 하단 메시지 */
+span.msg{
+    display: block;
+    width: 180px;
+    font-size: 9px;
+    font-weight: bold;
+    color: #f56f98;
+    /* 줄바꿈방지 */
+    white-space: nowrap;
+    margin-top: -3px;
+
+    /* outline: 1px solid green; */
+}

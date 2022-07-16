@@ -2,7 +2,7 @@
 
 
 /************** 1300px 이하 미디어쿼리 시작 **************/
-@media screen and (max-width:1300px) {
+@media screen and (max-width:850px) {
 .ibx{
     width: 100%;
 }

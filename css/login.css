@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* 2. 메인영역 CSS */
+
+@import url(core.css);
+@import url(common.css);
+@import url(reset.css);
+
+body *{
+    /* outline: 1px dashed limegreen; */
+}
+input:focus {
+    outline: none;
+}
+
+/* 로그인 타이틀 영역 */
+.tcont{
+    padding: 120px 0 35px;
+    text-align: center;
+}
+.tcont p{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+/* 로그인 박스 */
+.login_box{
+    width: 800px;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 46px;
+    border-top: 2px solid #ff99bf;
+    border-bottom: 2px solid #ff99bf;
+    margin-bottom: 100px;
+    
+}
+.lcont{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.lcont h3{
+    font-size: 17px;
+    color: #2f231c;
+    padding-bottom: 5px;
+}
+.lcont p{
+    padding-bottom: 20px;
+    font-size: 12px;
+    color: #ff7c98;
+}
+/* 입력창 겉박스 */
+.inbox{
+    position: relative;
+}
+/* 입력창 속성 - 아이디,패스워드창 */
+.inbox input[type="text"],
+.inbox input[type="password"]{
+    width: 200px;
+    height: 45px;
+    color: #696663;
+    font-size: 13px;
+    border: 0;
+    background: #efefef;
+    box-sizing:content-box;
+    margin: 5px 0;
+    padding-left: 40px;
+}
+
+/* 입력창 아이콘 */
+.input_box .fi.fi-person,
+.input_box .fi.fi-unlocked{
+    position: absolute;
+    left: 10px;
+    color: #696663;
+    font-size: 18px;
+    line-height: 59px;
+}
+.input_box .fi.fi-person{
+    top: 0;
+}
+.input_box .fi.fi-unlocked{
+    bottom: 0;
+}
+/* 로그인버튼 */
+.btnbx input[type="submit"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 59px;
+    border: 0;
+    background: #f56f98;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 59px;
+    cursor: pointer
+}
+
+/* 기타링크 */
+.addbx{
+    margin-top: 10px;
+}
+.addbx a{
+    font-size: 12px;
+    margin-left: 20px;
+    color: #2f231c;
+}

@@ -60,6 +60,12 @@
     box-sizing: border-box;
 }
 
+#slide_banner section::before {
+    content: '';
+    display: block;
+    padding-top: 60%;
+}
+
 /* 2-2. 슬라이드 배너 : #slide */
 .slide{
     display: flex;
@@ -69,9 +75,48 @@
     position: absolute;
     top: 0;
     left: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+/********** 플러그인 구성 css 시작*********/
+.scont{
+    min-height: 697px;
+    max-width: 1920px;
+    
+}
+
+.swiper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+
+    /* Center slide text vertically */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
     width: 100%;
     height: 100%;
-}
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+/****** 스와이퍼 css 끝 *******/
 
 .ms{
     display: none;
@@ -80,17 +125,19 @@
 .slide li {
     flex-shrink: 0;
     /* 부모박스크기만큼 줄어들지 않음 -> 0 */
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     /* 가로크기를 부모박스 크기에 맞춤! */
     /* height 값은 flex박스 자식요소에서
     등분할시 자동 100%임! */
+    width: 100vw;
+    
 }
 
 .slide li img {
     /*이미지는 박스에 맞춤!*/
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     /* 이미지 비율유지 채우기! */
 }
 
