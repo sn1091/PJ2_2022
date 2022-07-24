@@ -31,11 +31,12 @@
     display: block;
     /* width: 1200px; */
     height: 150px;
-    
     /* max-width: 100%; */
     /* margin: 0 auto; */
     /* 색이반고윙/크  */
-    background: #00A2EA url(../images/main_banner_june.jpg) no-repeat 50% 0;
+    background-color: #00A2EA;
+    background-image: url(../images/main_banner_june.jpg);
+    background-position: 50% 50%;
 }
 
 #main_banner img{
@@ -311,8 +312,11 @@ article h2{
 /****** 3-4. 메뉴 컨텐츠 : .menu_ct ********/
 
 .menu_ct{
-    height: 1070px;
-    background: url(../images/bg_menu.jpg) no-repeat 50% 0;
+    height: auto;
+    background: url(../images/bg_menu.jpg);
+    background-repeat: no-repeat; 
+    background-position :50% 50%;
+    background-size: cover;
     padding: 20px 0;
 }
 /* 메뉴 컨텐츠 타이틀  */
@@ -324,13 +328,21 @@ article h2{
 /* 메뉴 컨텐츠 이미지 */
 .m_img{
     padding-top: 20px;
+    width: 100%;
 }
 .m_img .mbx{
     position: relative;
     /* 자식 : a태그들 */
-    width: 981px;
-    height: 911px;
+}
+.m_img img{
+    display: block;
+    height: 100%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.m_img .mobile{
+    display: none;
 }
 
 
@@ -401,6 +413,13 @@ article h2{
 .str_dv section{
     width: 50%;
     float: left;
+}
+
+.sd_img .pc{
+    display: block;
+}
+.sd_img .mobile{
+    display: none;
 }
 
 /********** 인스타그램 영역 ***************/
